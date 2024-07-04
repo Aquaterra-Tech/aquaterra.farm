@@ -2,6 +2,57 @@
 import Logo from '../components/Logo.astro';
 ---
 
-<nav>
-  <Logo />
+<style>
+  .Nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    padding: 40px 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 2;
+  }
+
+  .Nav-logo {
+    width: 125px;
+    height: 35px;
+  }
+
+  .Nav-burger {
+    width: 43px;
+    height: 43px;
+  }
+</style>
+
+<nav class='Nav'>
+  <div class='Nav-logo'>
+    <Logo />
+  </div>
+
+  <svg
+    class='Nav-burger'
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 0 43 43'
+    fill='none'
+  >
+    <line
+      x1='9'
+      y1='25.25'
+      x2='33'
+      y2='25.25'
+      stroke='#FBFBF5'
+      stroke-width='1.5'></line>
+    <line
+      x1='9'
+      y1='16.25'
+      x2='33'
+      y2='16.25'
+      stroke='#FBFBF5'
+      stroke-width='1.5'></line>
+  </svg>
 </nav>

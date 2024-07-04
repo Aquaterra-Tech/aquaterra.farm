@@ -22,32 +22,52 @@ const { title } = Astro.props;
 </html>
 
 <style is:global>
+  @font-face {
+    font-family: 'Aeonik';
+    src:
+      url('Aeonik-Regular.woff2') format('woff2'),
+      url('Aeonik-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
   :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
+    --color-white: #fbfbf5;
+    --color-solid-white: #ffffff;
+    --color-2: #f6f2eb;
+    --color-light-cream: #f0e9dd;
+    --color-17: #f7f4ed;
+    --color-10: #f1f2d9;
+    --color-14: #0000004d;
+    --color-11: #18282480;
+    --color-12: #1f3226;
+    --color-15: #1b2d22;
+    --color-16: #1c2e23;
+    --color-text: #271e1d;
+    --color-1: #182824;
+    --color-forest-green: #275130;
+    --color-night-green: #213528;
+    --color-3: #325a35;
+    --color-4: #253a2c;
+    --color-7: #274130;
+    --color-5: #275130;
+    --color-8: #b7e0bf;
+    --color-9: #cce9d2;
+    --color-blue-2-50: #eaf9fb;
+    --color-blue: #c7eff4;
+    --color-6: #7fdae6;
+    --color-13: #92dce5;
+    --color-bright-yellow: #fcff79;
+    --color-18: #fdff99;
+    --color-orange: #ffa34e;
+    --color-smooth-green: #cce9d2;
   }
 
-  html {
-    font-family: system-ui, sans-serif;
-    background-size: 224px;
-  }
-
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
+  html,
+  body {
+    font-family: 'Aeonik', system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
   }
 </style>
