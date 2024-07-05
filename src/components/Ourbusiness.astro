@@ -290,6 +290,31 @@
     font-weight: 400;
     letter-spacing: -0.14px;
   }
+
+  .Regulatory {
+    max-width: 170px;
+
+    opacity: 0.6;
+
+    color: #f7f4ed;
+    font-family: Aeonik;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .Regulatory + div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .Regulatory + div img {
+    flex-grow: 0;
+    margin-top: 25px;
+
+    border-radius: 0;
+  }
 </style>
 
 <section>
@@ -607,5 +632,11 @@
   </p>
   <a href='
       #'>Learn more about our Business</a>
-  <p>Regulatory Authorities & Environmental Partners</p>
+  <p class='Regulatory'>Regulatory Authorities & Environmental Partners</p>
+  <div>
+    <img height='24px' src='arh.png' />
+    <img height='15px' src='icnf.png' />
+    <img height='14px' src='drap.png' />
+    <img height='26px' src='apa.png' />
+  </div>
 </section>
