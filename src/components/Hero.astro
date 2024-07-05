@@ -1,0 +1,78 @@
+<style>
+  .Hero-content {
+    position: absolute;
+    width: 100%;
+    height: 100lvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+
+    z-index: 1;
+
+    text-align: center;
+  }
+
+  .Hero-content h1 {
+    color: var(--color-white);
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    max-width: 260px;
+  }
+
+  .Hero-content button {
+    display: inline-flex;
+    padding: 14px 20px 16px 20px;
+    align-items: center;
+    gap: 6px;
+    margin-top: 90px;
+    margin-bottom: 122px;
+
+    font-family: Aeonik;
+    font-size: 16px;
+    color: var(--color-night-green);
+
+    border-radius: 8px;
+    background: var(--color-white);
+    border: none;
+  }
+
+  video {
+    max-width: 100%;
+    height: 100vh;
+    height: 100lvh;
+
+    z-index: 0;
+
+    object-fit: cover;
+  }
+</style>
+
+<section class='Hero'>
+  <div class='Hero-content'>
+    <h1>Championing Responsible Agriculture in Iberia</h1>
+    <button
+      >Watch full video <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='9'
+        height='10'
+        viewBox='0 0 9 10'
+        fill='none'
+      >
+        <path
+          d='M8.75012 4.56699C9.08346 4.75944 9.08346 5.24056 8.75012 5.43301L1.25012 9.76314C0.91679 9.95559 0.500123 9.71503 0.500123 9.33013L0.500123 0.669873C0.500123 0.284973 0.91679 0.0444101 1.25012 0.23686L8.75012 4.56699Z'
+          fill='#213528'></path>
+      </svg></button
+    >
+  </div>
+  <video playsinline muted autoplay loop preload='auto'>
+    <source src='home_video.mp4' type='video/mp4' />
+  </video>
+</section>
