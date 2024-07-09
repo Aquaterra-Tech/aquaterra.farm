@@ -1,0 +1,120 @@
+---
+import { Picture } from 'astro:assets';
+
+import avocados from './avocados.png';
+import tangerines from './tangerines.png';
+---
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 55px 16px;
+
+    background: var(--Forest-Green-2, #275130);
+  }
+
+  h3 {
+    margin: 0 0 12px 0;
+
+    color: var(--Light-Cream-2, #f0e9dd);
+    text-align: center;
+    font-feature-settings: 'ss06' on;
+    font-family: Aeonik;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  p {
+    max-width: 300px;
+    margin: 0 auto 32px auto;
+
+    color: var(--Light-Cream-2, #f0e9dd);
+    text-align: center;
+    font-family: Aeonik;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+
+    opacity: 0.6;
+  }
+
+  ul {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+
+    margin: 0 0 35px 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  li {
+    flex: 1;
+
+    padding: 20px;
+
+    border-radius: 16px;
+    background: var(--Light-Cream-2, #f0e9dd);
+
+    color: var(--Forest-Green-2, #275130);
+    font-family: Aeonik;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.48px;
+  }
+
+  li:last-child {
+    margin-top: 15px;
+  }
+
+  a {
+    display: inline-flex;
+    padding: 10px 20px 12px 20px;
+    align-items: flex-start;
+    gap: 10px;
+
+    border-radius: 8px;
+    background: var(--Bright-Yellow-2, #fcff79);
+
+    text-decoration: none;
+    color: var(--Night-Green-2, #213528);
+    font-family: Aeonik;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+  }
+</style>
+
+<section>
+  <h3>Premium, Sustainable Fruits</h3>
+  <p>
+    We grow high-quality, delicious fruits that positively contribute to the
+    environment and the communities we serve.
+  </p>
+  <ul>
+    <li>
+      <Picture
+        src={avocados}
+        formats={['avif', 'webp']}
+        alt='Multiple avocados cut in half'
+      />
+      Avocados
+    </li>
+    <li>
+      <Picture
+        src={tangerines}
+        formats={['avif', 'webp']}
+        alt='Multiple tangerines'
+      />
+      Tangeries
+    </li>
+  </ul>
+  <a href='#'>Our Fruits</a>
+</section>
