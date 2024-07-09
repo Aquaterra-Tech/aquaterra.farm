@@ -1,10 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
-import Logo from '../components/Logo.astro';
 import Hero from '../components/Hero.astro';
 import Aboutus from '../components/Aboutus.astro';
 import Ourbusiness from '../components/Ourbusiness.astro';
+import ESG from '../components/ESG.astro';
+import Ourfruits from '../components/Ourfruits.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <style></style>
@@ -15,49 +17,9 @@ import Ourbusiness from '../components/Ourbusiness.astro';
     <Hero />
     <Aboutus />
     <Ourbusiness />
-
-    <section>
-      <h2>ESG Excellence</h2>
-      <p>Aquaterra's ESG excellence is rooted in three foundational elements</p>
-      <div>
-        <h3>Environment</h3>
-        <p>
-          A business model that combines sustainable farming practices,
-          nature-based solutions, and innovative technologies to produce premium
-          fruits while protecting and restoring local ecosystems
-        </p>
-      </div>
-      <div>
-        <h3>Social</h3>
-        <p>
-          A long-term investment in rural lands and communities to boost
-          regional and national economies
-        </p>
-      </div>
-      <div>
-        <h3>Governance</h3>
-        <p>
-          A commitment to not only adhere to, but also exceed, leading
-          environmental standards, as evidenced by our rigorous climate impact
-          assessments and environmental auditing process
-        </p>
-      </div>
-      <a href='#'>Our Impact</a>
-    </section>
-    <section>
-      <h3>Premium, Sustainable Fruits</h3>
-      <p>
-        We grow high-quality, delicious fruits that positively contribute to the
-        environment and the communities we serve.
-      </p>
-      <ul>
-        <li>Avocados</li>
-        <li>Tangeries</li>
-      </ul>
-      <a href='#'>Our Fruits</a>
-    </section>
+    <ESG />
+    <Ourfruits />
   </main>
-  <footer>
-    <Logo />
-  </footer>
+
+  <Footer />
 </Layout>
