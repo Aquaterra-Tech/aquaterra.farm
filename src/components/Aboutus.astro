@@ -1,5 +1,6 @@
 <style>
   section {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,6 +70,31 @@
     align-items: center;
     background: white;
     border-radius: 50%;
+  }
+
+  @media screen and (min-width: 1024px) {
+    section {
+      padding: 200px 0;
+    }
+
+    h2 {
+      max-width: 810px;
+      font-size: 56px;
+    }
+
+    p {
+      max-width: 645px;
+
+      font-size: 18px;
+      opacity: 0.6;
+    }
+
+    .Pill {
+      position: absolute;
+
+      top: 0;
+      left: 0;
+    }
   }
 </style>
 

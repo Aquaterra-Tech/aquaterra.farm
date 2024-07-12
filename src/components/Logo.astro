@@ -1,5 +1,21 @@
 ---
 const { alt } = Astro.props;
+
+//POST https://participa.pt/requests/signup.php
+const payload = {
+  type: '2',
+  name: 'Joao Justo',
+  email: 'jpjustonunes@gmail.com',
+  password: 'jpKan933510537',
+  'confirm-password': 'jpKan933510537',
+  city: '1821',
+  cities: ['1501', '1821'],
+  tipology: [],
+};
+
+//https://www.participa.pt/pt/?action=activar&h=id=57716&participa.pt/pt/?action=activar&id=57716&code=c11f0ab2c19e2a638e98aa6deda1e6d8
+
+//PHPSESSID	"g0j88lekl6u1bd3p2hprpk9i5e"
 ---
 
 <svg
@@ -14,3 +30,19 @@ const { alt } = Astro.props;
   >
   </path>
 </svg>
+
+<!-- "/requests/participate.php" -->
+<!-- PHPSESSID=g0j88lekl6u1bd3p2hprpk9i5e -->
+<!-- Referer https://participa.pt/pt/consulta/reformulacao-do-projeto-agroflorestal-das-herdades-de-murta-e-monte-novo-hm-mn-r -->
+<!-- -----------------------------357367131537351956932251886349 Content-Disposition:
+form-data; name="tipology" 74
+-----------------------------357367131537351956932251886349 Content-Disposition:
+form-data; name="comment" Tendo em conta todas as salvaguardas que o promotor
+promete fazer para valorizar e conservar a área envolvente, considero que este
+projecto deveria ser aprovado.
+-----------------------------357367131537351956932251886349 Content-Disposition:
+form-data; name="agree" 1
+-----------------------------357367131537351956932251886349 Content-Disposition:
+form-data; name="parent_id" 7762
+-----------------------------357367131537351956932251886349--
+ -->

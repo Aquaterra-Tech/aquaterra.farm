@@ -16,6 +16,12 @@ import Logo from '../components/Logo.astro';
     justify-content: space-between;
 
     z-index: 2;
+
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .Nav.is-hidden {
+    transform: translateY(-140px);
   }
 
   .Nav-logo {
@@ -23,15 +29,97 @@ import Logo from '../components/Logo.astro';
     height: 35px;
   }
 
+  .Nav-links {
+    display: none;
+    padding: 10px 16px 12px 16px;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .Nav-links a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-family: Aeonik;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
   .Nav-burger {
     width: 43px;
     height: 43px;
   }
+
+  .Nav-contact {
+    display: none;
+    padding: 10px 16px 12px 16px;
+    align-items: flex-start;
+    gap: 10px;
+
+    border-radius: 8px;
+    border: 1px solid var(--Black, rgba(0, 0, 0, 0.05));
+    background: var(--Bright-Yellow-2, #fcff79);
+
+    color: var(--Forest-Green-2, #275130);
+    text-decoration: none;
+    font-family: Aeonik;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .Nav {
+      padding: 45px 65px;
+    }
+
+    .Nav-links {
+      display: inline-flex;
+    }
+
+    .Nav-burger {
+      display: none;
+    }
+
+    .Nav-contact {
+      display: inline-flex;
+    }
+  }
 </style>
 
-<nav class='Nav'>
+<script>
+  window.onload = () => {
+    let scrollPosition = window.scrollY;
+    const navbar = document.getElementById('navbar');
+
+    console.log(scrollPosition);
+    window.scrollY;
+
+    window.onscroll = () => {
+      const currentScrollPosition = window.scrollY;
+      console.log('here');
+      if (scrollPosition > currentScrollPosition) {
+        navbar.classList.remove('is-hidden');
+      } else {
+        navbar.classList.add('is-hidden');
+      }
+
+      scrollPosition = currentScrollPosition;
+    };
+  };
+</script>
+
+<nav class='Nav' id='navbar'>
   <div class='Nav-logo'>
     <Logo />
+  </div>
+
+  <div class='Nav-links'>
+    <a href='#'>About us</a>
+    <a href='#'>Our Business</a>
+    <a href='#'>Our Fruits</a>
+    <a href='#'>Our Impact</a>
+    <a href='#'>Insights</a>
   </div>
 
   <svg
@@ -55,4 +143,5 @@ import Logo from '../components/Logo.astro';
       stroke='#FBFBF5'
       stroke-width='1.5'></line>
   </svg>
+  <a class='Nav-contact' href='#'>Contact us</a>
 </nav>
